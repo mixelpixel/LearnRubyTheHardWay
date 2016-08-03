@@ -12,7 +12,7 @@ puts "Hens #{25 + 30 / 6}"
 # seventy-five minus seventy-two is three, so... one-hundred minus three is ninety-seven
 puts "Roosters #{100 - 25 * 3 % 4}"
 
-# "simple printing statement-- "putsing"
+# simple printing statement-- er, "putsing"... "putting"?
 puts "Now I will count the eggs:"
 
 # P.E.M.D.A.S. arithmetic with an example of floor division (rounding decimals or
