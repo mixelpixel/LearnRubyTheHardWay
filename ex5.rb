@@ -37,3 +37,11 @@ puts "I am #{centimeters.round(0)} centimeters tall."
 # flooring
 puts "I am #{centimeters.to_i} centimeters tall."
 puts "I am #{(centimeters.to_i).to_f} centimeters tall."
+
+print "puts v print"
+print 2+2
+print 4>5
+
+puts [nil, 1, 2]
+print [nil, 1, 2]
+puts nil
