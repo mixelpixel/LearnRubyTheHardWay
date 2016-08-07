@@ -13,3 +13,18 @@ print "How much do you weigh? "
 weight = gets.chomp
 
 puts "So, you're #{age} old, #{height} tall and #{weight} heavy."
+
+# just to demonstrate the differences between puts and print:
+
+puts "How old are you? "
+age = gets.chomp
+puts "How tall are you? "
+height = gets.chomp
+puts "How much do you weigh? "
+weight = gets.chomp
+
+puts "So, you're #{age} old, #{height} tall and #{weight} heavy."
+
+# http://ruby-doc.org/docs/Tutorial/part_02/user_input.html
+
+# http://stackoverflow.com/questions/23193813/how-does-gets-and-gets-chomp-in-ruby-work
