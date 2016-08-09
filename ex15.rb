@@ -14,6 +14,13 @@ puts "Here's your file #{filename}:"
 # by using the .read function
 print txt.read
 
+# HOW TO CLOSE A FILE?
+# txt = close(filename)
+# close(txt)
+# close(filename)
+txt.close
+
+
 print "Type the filename again: "
 # gets the filename an alternative way from within the script
 # instead of in the command line launching the script
@@ -27,3 +34,19 @@ txt_again = open(file_again)
 # printing the file to be opened and reading it in to the print.
 print txt_again.read
 
+# IMPORTANT - OPEN FILE, USE FILE, CLOSE FILE
+txt_again.close
+
+# In irb:
+# PS C:\Users\patrick\stuff\Ruby> irb
+# irb(main):001:0> File.open("ex15_sample.txt")
+# => #<File:ex15_sample.txt>
+# irb(main):002:0> txt = File.open("ex15_sample.txt")
+# => #<File:ex15_sample.txt>
+# irb(main):003:0> puts txt.read
+# This is stuff I typed into a file.
+# It is really cool stuff.
+# Lots and lots of fun to have in here.
+
+# => nil
+# irb(main):004:0>
