@@ -39,14 +39,18 @@ txt_again.close
 
 # In irb:
 # PS C:\Users\patrick\stuff\Ruby> irb
-# irb(main):001:0> File.open("ex15_sample.txt")
+# irb(main):001:0> txt = File.open("ex15_sample.txt")
 # => #<File:ex15_sample.txt>
-# irb(main):002:0> txt = File.open("ex15_sample.txt")
-# => #<File:ex15_sample.txt>
-# irb(main):003:0> puts txt.read
+# irb(main):002:0> puts txt.read
 # This is stuff I typed into a file.
 # It is really cool stuff.
 # Lots and lots of fun to have in here.
 
 # => nil
-# irb(main):004:0>
+# irb(main):003:0> txt
+# => #<File:ex15_sample.txt>
+# irb(main):004:0> txt.close
+# => nil
+# irb(main):005:0> txt
+# => #<File:ex15_sample.txt (closed)>
+# irb(main):006:0>
