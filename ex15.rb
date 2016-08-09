@@ -1,6 +1,8 @@
 # http://learnrubythehardway.org/book/ex15.html
 
 # assign a variable to the ARGument Vector entered with command line which runs the script
+# note: this script will only read in a file in the same directory as the script... to look in to
+# how to read in any script/any directory...
 filename = ARGV.first
 
 # assigns a variable to opening the file named in the ARGumentVector
@@ -24,3 +26,4 @@ txt_again = open(file_again)
 
 # printing the file to be opened and reading it in to the print.
 print txt_again.read
+
