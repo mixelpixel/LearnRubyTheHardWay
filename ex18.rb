@@ -27,3 +27,8 @@ print_two_again("Zed", "Shaw")
 print_one("First!")
 print_none()
 
+=begin
+functions which don't have parameters don't need the brackets ()
+but it is often clearer to write them that way
+=end 
+
