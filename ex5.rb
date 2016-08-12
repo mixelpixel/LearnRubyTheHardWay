@@ -1,3 +1,6 @@
+# http://learnrubythehardway.org/book/ex5.html
+# Exercise 5: More Variables and Printing
+
 my_name = 'Zed A. Shaw'
 my_age = 35 # not a lie in 2009
 my_height = 74 # inches
@@ -45,3 +48,5 @@ print 4>5
 puts [nil, 1, 2]
 print [nil, 1, 2]
 puts nil
+
+

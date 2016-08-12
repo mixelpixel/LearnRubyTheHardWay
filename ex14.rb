@@ -1,4 +1,5 @@
 # http://learnrubythehardway.org/book/ex14.html
+# Exercise 14: Prompting and Passing
 
 # You will also notice that we used ARGV.first in this script to get
 # the first command line argument. In the previous script I used
@@ -31,3 +32,5 @@ Alright, so you said #{likes} about liking me.
 You live in #{lives}.  Not sure where that is.
 And you have a #{computer} computer.  Nice
 """
+
+

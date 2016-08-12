@@ -1,4 +1,7 @@
-#Floating poitn re-write
+# http://learnrubythehardway.org/book/ex3.html
+# Exercise 3: Numbers and Math
+
+#Floating point re-write
 
 # This line of code prints the text in between the quotation marks
 puts "I will now count my chickens:"
@@ -58,3 +61,5 @@ puts " 1 / 4 = #{1.0 / 4.0}"
 # so long as one operand is floating point, the operator returns floating point
 puts 1 / 4.0
 puts 5.0 % 2
+
+

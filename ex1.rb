@@ -1,3 +1,6 @@
+# http://learnrubythehardway.org/book/ex1.html
+# Exercise 1: A Good First Program
+
 puts "Hello World!"
 puts "Hello Again"
 puts "I like typing this."
@@ -24,3 +27,4 @@ puts "line #1\
 puts "line #1
     line #2
     line #3"
+

@@ -1,4 +1,5 @@
 # http://learnrubythehardway.org/book/ex12.html
+# Exercise 12: Prompting People for Numbers
 
 print "Give me a number: "
 number = gets.chomp.to_i
@@ -28,3 +29,5 @@ bill = gets.chomp.to_i
 tip = bill * 0.15
 
 puts "A tip of #{tip.round(2)} would be nice"
+
+

@@ -1,3 +1,6 @@
+# http://learnrubythehardway.org/book/ex4.html
+# Exercise 4: Variables And Names
+
 # assigns (binds?) the integer 100 to the variable 'cars'
 cars = 100
 # assigns the floating point value 4.0 to a variable called 'space_in_a_car'
@@ -18,4 +21,5 @@ puts "There are only #{drivers} available."
 puts "There will be #{cars_not_driven} empty cars today."
 puts "We can transport #{carpool_capacity} people today."
 puts "We have #{passengers} to carpool today."
-puts "We need to put about #{average_passengers_per_car} in each car."
+puts "We need to put about #{average_passengers_per_car} in each car."\
+

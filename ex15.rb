@@ -1,5 +1,6 @@
 # http://learnrubythehardway.org/book/ex15.html
 # Exercise 15: Reading Files
+
 # NOTE this script is to be run in conjunction with the ex15_sample.txt file
 # as well and the command from the shell is as follows $ ex15.rb ex15_sample.txt
 
@@ -57,3 +58,5 @@ txt_again.close
 # irb(main):005:0> txt
 # => #<File:ex15_sample.txt (closed)>
 # irb(main):006:0>
+
+

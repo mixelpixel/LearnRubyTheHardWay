@@ -1,5 +1,6 @@
 # http://learnrubythehardway.org/book/ex13.html
 # Exercise 13: Parameters, Unpacking, Variables
+
 # note that this script must be run from the command line
 # with the additional variables/arguments/parameters
 # e.g. "$ ruby ex13.rb first 2nd 3rd" or "$ ruby ex13.rb stuff things" that and the like
@@ -34,3 +35,4 @@ puts "A bigger number is #{bigger}."
 
 # You should use $stdin.gets.chomp from now on since
 # the action gets.chomp has problems with ARGV.
+

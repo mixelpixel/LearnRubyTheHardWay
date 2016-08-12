@@ -1,4 +1,5 @@
 # http://learnrubythehardway.org/book/ex8.html
+# Exercise 8: Printing, Printing
 
 formatter = "%{first} %{second} %{third} %{fourth}"
 
@@ -14,3 +15,5 @@ puts formatter % {
     third: "But it didn't sing.",
     fourth: "So I said goodnight."
 }
+
+

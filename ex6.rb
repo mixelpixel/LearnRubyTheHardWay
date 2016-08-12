@@ -1,3 +1,6 @@
+# http://learnrubythehardway.org/book/ex6.html
+# Exercise 6: Strings and Text
+
 types_of_people = 10
 x = "There are #{types_of_people} types of people."
 binary = "binary"
@@ -18,3 +21,4 @@ w = "This is the left side of..."
 e = "a string with a right side."
 
 puts w + e
+

@@ -1,4 +1,5 @@
 # http://learnrubythehardway.org/book/ex7.html
+# Exercise 7: More Printing
 
 puts "Mary had a little lamb."
 
@@ -35,3 +36,5 @@ puts end7 + end8 + end9 + end10 + end11 + end12
 # of evaluating Ruby code. The primary difference between
 # them is that puts adds a newline after executing, and
 # print does not.
+
+
