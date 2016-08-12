@@ -1,7 +1,16 @@
 # http://learnrubythehardway.org/book/ex17.html
 # Exercise 17: More Files
 
-# $ echo "This is a test file." > test.txt
+# prior to running this script, enter this into the command prompt:
+# $ echo "This is a test file." > ex17_test.txt
+# Feel free to verify the text file creation like so:
+# $ cat ex17_test.txt
+# And invoke the script with two parameters/variables/arguments:
+# $ ruby ex17.rb ex17_test.txt ex17_new_file.txt
+# Note - I am using notepad++ and the resulting file has an odd
+# character at the end that just looks like a square. Not sure what
+# exactly is going on there...?
+
 
 #one line version:
 from_file, to_file = ARGV; in_file = open(from_file); indata = in_file.read; out_file = open(to_file, 'w'); out_file.write(indata); out_file.close; in_file.close
