@@ -1,6 +1,11 @@
 # http://learnrubythehardway.org/book/ex20.html
 # Exercise 20: Functions and Files
 
+# Create a text file consisting of three lines of text
+# and name it ex20_test.txt
+# Invoke this script from the command prompt like so:
+# $ ruby ex20.rb ex20_test.txt
+
 # Assigns the argument vector entered when the script is invoked
 input_file = ARGV.first
 
