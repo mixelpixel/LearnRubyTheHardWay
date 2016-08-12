@@ -1,6 +1,11 @@
 # http://learnrubythehardway.org/book/ex16.html
 # Exercise 16: Reading and Writing Files
 
+# You can create a text file in Notepad++ (or what app have ya)
+# called "test.txt", but the script does not actually require it to run.
+# For the sake of posterity, I am invoking this script like so:
+# $ ruby ex16.rb ex16_test.txt
+
 # binds a variable to the filename passed in when the script is executed from the command line
 filename = ARGV.first
 
