@@ -1,0 +1,116 @@
+# http://learnrubythehardway.org/book/ex22.html
+# Exercise 22: What Do You Know So Far?
+
+ri - Had to wrestle a bit to get Ruby index command to work in powershell and got it to work renaming the files rr since ri is remove-item in PShell
+ruby -v for version
+ruby <arg> for executing arguments, scripts and such with Ruby
+irb for Interactive Ruby shell
+
+# -*- coding: utf-8 -*-   I don't really understand text encoding
+#!/usr/bin/env ruby        not sure how this is used either
+
+
+puts: put string to screen with a new line at the end
+
+print: prints a line without a new line at the end
+
+_ underscore
+
+() parentheses or brackets for enclosing stuff, not always needed with methods and function calls
+
+"" and '' are used to enclose text
+(note irb also likes them for things like x = File.open("ex15_sample.txt") )
+single quotes ignore formatting characters
+
+"""
+multi
+line
+strings
+"""
+
+=begin
+multi
+line
+comments
+=end
+
+#: the octothorpe is used for comments and commenting out lines of code
+
+#{}: used for inserting variables and cuh into print and put statements
+
++ for addition
+- for subtraction
+* for multiplication
+** for exponentiation
+/ for division; floor with integers or decimal with floating point values
+
+1 an integer
+1.0 a floating point integer
+
+% percent sign is used for modular arithmetic
+< and > are less than/greater than comparison operators
+<= and >= greater/less than or equal to
+true and false are Boolean values
+
+= an assignment operator
+
+== equivalency comparison
+
+%{} formatting for strings
+
+\t tab
+\n new line
+\\ backwards slash
+
+gets a method to get standard input or read one line of a file at a a time
+gets.chomp does not play well with ARGV so use $stdin.gets.chomp
+gets.chomp is a way of getting a line and ignoring/removing it's new line (i think)
+gets.chomp.to_i gets a string, chomps off the new line and converts it to an integer
+
+.to_i a method to change a string to an integer
+.to_f a method to change a string to a floating point
+.to_s converts to a string
+
+ARGV is ARGument Value, it holds arguments that are entered from the command line
+
+$stdin standard input, used when arguments are entered on the command line to differentiate between $stdin.gets and kernel#gets (i think)
+
+open(filename) method that takes a filename as a parameter and returns a file object which can be assigned to a variable
+Opens in read mode, open(filename, 'w') opens in write mode and makes a new file if one not already there.
+there's also 'r' for read mode and 'a' for append and the + modifier can be used a+ w+ r+ to open in read/write and position the file in different ways
+
+read a file object method which returns the contents of the file as a string
+
+.truncate() file object method changes file size to integer bytes
+
+.write writes a string to a file
+
+.close closes the file VERY MPORTANT
+
+.length string method, returns length of the string
+
+.readline reads just one line of a text file
+
+.exist? returns true if a file exists, false if not
+
+*args used for multiple arguments, creates a list of arguments
+
+def
+  ...
+end
+THIS IS HOW TO FORMAT A FUNCTION
+
+.seek moves a files position indicator to a specified location, e.g. .seek(0) puts the position indicator at the beginning of the file
+
++=
+-=
+*=
+/+
+These operators take an existing value and add/subtract etc. to itself
+
+return used to return a value from a function when it is called.
+
+echo "<string of text>" > <file_name>.txt
+NOT sure about the text encoding here
+
+cat <file>.<name> conCATenates the file contents to the screen
