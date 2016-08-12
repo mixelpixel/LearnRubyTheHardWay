@@ -1,4 +1,7 @@
 # http://learnrubythehardway.org/book/ex15.html
+# Exercise 15: Reading Files
+# NOTE this script is to be run in conjunction with the ex15_sample.txt file
+# as well and the command from the shell is as follows $ ex15.rb ex15_sample.txt
 
 # assign a variable to the ARGument Vector entered with command line which runs the script
 # note: this script will only read in a file in the same directory as the script... to look in to
