@@ -1,0 +1,11 @@
+# http://learnrubythehardway.org/book/ex23.html
+# Exercise 23: Read Some Code
+
+
+resources for code examples:
+
+github.com
+launchpad.net
+gitorious.org
+sourceforge.bet
+bitbucket.org
