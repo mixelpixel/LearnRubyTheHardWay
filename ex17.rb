@@ -8,8 +8,8 @@
 # And invoke the script with two parameters/variables/arguments:
 # $ ruby ex17.rb ex17_test.txt ex17_new_file.txt
 # Note - I am using notepad++ and the resulting file has an odd
-# character at the end that just looks like a square. Not sure what
-# exactly is going on there...?
+# character ( ਍ ) on the second line that just looks like a square.
+# Not sure what exactly is going on there...?
 
 
 #one line version:
