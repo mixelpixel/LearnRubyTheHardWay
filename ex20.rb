@@ -81,3 +81,6 @@ current_line += 1
 # prints line 3 of current_file
 print_a_line(current_line, current_file)
 
+#Don't forget to close the file objects you've opened!
+current_file.close
+
