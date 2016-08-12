@@ -65,14 +65,14 @@ print_a_line(current_line, current_file)
 # assigns an addition operation to the integer assigned to current_file
 # current_line = current_line + 1
 # this syntax achieves the same operation as the verbose syntax above:
-current_file += 1
+current_line += 1
 # invokes the print_a_line function with the parameters
 # current_line and current_file
 # this will print the second line of current_file
 print_a_line(current_line, current_file)
 
 # current_line = current_line + 1
-current_file += 1
+current_line += 1
 # prints line 3 of current_file
 print_a_line(current_line, current_file)
 

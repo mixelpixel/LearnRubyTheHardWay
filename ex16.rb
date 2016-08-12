@@ -1,4 +1,5 @@
 # http://learnrubythehardway.org/book/ex16.html
+# Exercise 16: Reading and Writing Files
 
 # binds a variable to the filename passed in when the script is executed from the command line
 filename = ARGV.first
@@ -14,10 +15,13 @@ $stdin.gets
 
 puts "Opening the file..."
 # this assigns to the variable 'target' an object of the file opened in 'w'rite mode
+# note that this creates the file named in the variable filename and writes the file to disk
+# in the working directory.
 target = open(filename, 'w')
 
 puts "Truncating the file. Goodbye!"
 # the number is the max length in bytes?
+# since this file is already 0KB, the truncate function is kinda unnecesary
 target.truncate(0)
 
 puts "Now I am going to ask you for three lines."
@@ -53,3 +57,5 @@ print read_me.read
 
 puts "And we close that back up again"
 read_me.close
+
+

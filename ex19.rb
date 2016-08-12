@@ -25,8 +25,7 @@ cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
 
 def poop(ship)
   puts ship
-  
-  
 end
 
 poop("lollipop")
+

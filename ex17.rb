@@ -1,4 +1,6 @@
 # http://learnrubythehardway.org/book/ex17.html
+# Exercise 17: More Files
+
 # $ echo "This is a test file." > test.txt
 
 #one line version:
@@ -25,3 +27,5 @@ from_file, to_file = ARGV; in_file = open(from_file); indata = in_file.read; out
 # # # puts "Alright, all done."
 # # # out_file.close
 # # # in_file.close
+
+
