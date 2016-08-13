@@ -24,15 +24,16 @@ puts false || false == false
 # AND (&&)
 puts true && false == false
 puts true && true == true
-puts "huh?"
-# puts false && true == false
+# puts "huh?"
+# puts false && true == false #these read out as false? ternery operator stuff?
 # puts false && false == false
 puts (false && true) == false
 puts (false && false) == false
-puts "ummm...?"
+
+puts true and false == false
+puts true and true == true
 puts (false and true) == false
 puts (false and false) == false
-puts "weird"
 
 # NOT OR (!||) and (not ||)
 puts not(true || false) == false
