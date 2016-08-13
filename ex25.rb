@@ -1,5 +1,7 @@
 # http://learnrubythehardway.org/book/ex25.html
 # Exercise 25: Even More Practice
+# run the module in the interactive ruby shell with irb
+# require "./ex25.rb"
 
 module Ex25
 
