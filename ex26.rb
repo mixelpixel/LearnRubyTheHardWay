@@ -103,6 +103,7 @@ Ex25.print_first_word(sorted_words) #sort >> sorted
 Ex25.print_last_word(sorted_words)
 sorted_words = Ex25.sort_sentence(sentence) # _sentenc >> _sentence
 Ex25.print_first_and_last(sentence)
-Ex25:print_first_and_last_sorted(sentence)
+Ex25.print_first_and_last_sorted(sentence) # Ex25: >> Ex25.
+
 
 
