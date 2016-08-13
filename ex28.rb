@@ -1,6 +1,23 @@
 # learnrubythehardway.org/book/ex28.html
 # Exercise 28: Boolean Practice
 
+# && (and)
+# || (or)
+# ! (not)
+# != (not equal)
+# == (equal) "generic equality" or "value equality"
+# >= (greater-than-equal)
+# <= (less-than-equal)
+# true
+# false
+# === (equals equals equals) "case equality"
+# see: http://stackoverflow.com/questions/7156955/whats-the-difference-between-equal-eql-and
+# and: http://ruby-doc.org/core-2.3.1/Object.html#method-i-eql-3F
+# equal? "identity comparison"
+# eql? "Hash equality"
+# is_a?
+# IS THERE A !== ? Apparently not - see end of file
+
 puts (true && true) == true
 puts (false && true) == false
 puts (1 == 1 && 2 == 1) == false
@@ -22,4 +39,28 @@ puts (1 == 1 && (!("testing" == 1 || 1 == 0))) == true
 puts ("chunky" == "bacon" && (!(3 == 4 || 3 == 3))) == false
 puts (3 == 3 && (!("testing" == "testing" || "Ruby" == "Fun"))) == false
 
+class Object
+  def all_equals(o)
+    ops = [:==, :===, :eql?, :equal? ] # I put a space before the closing bracket so Notepad would grok the end of the class
+    Hash[ops.map(&:to_s).zip(ops.map {|s| send(s, o) })]
+  end
+end
+
+puts "a".all_equals "a" # => {"=="=>true, "==="=>true, "eql?"=>true, "equal?"=>false}
+
+=begin
+=== case equality
+== generic equality
+both works similar but "===" does case statements
+here's the difference:
+=end
+
+puts "test" == "test"  #=> true
+puts "test" === "test" #=> true
+
+puts String === "test"   #=> true
+puts String == "test"  #=> false
+# puts String !== "test"
+# puts String not === "test"
+# Nope
 
