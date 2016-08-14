@@ -51,6 +51,8 @@ while i < n
   puts "\n"
 end
 
+# more fun w/study drills
+
 i = 0
 print "Enter a max number for the loop: "
 n = $stdin.gets.chomp.to_i
@@ -68,3 +70,11 @@ while i < n
   puts "At the bottom i is #{i}"
   puts "\n"
 end
+
+(0..6).each do |i|
+  puts "i is now #{i}"
+  i += 1
+  puts "i is now #{i}"
+  puts
+end
+
