@@ -14,6 +14,7 @@ end
 # same as above, but in a more Ruby style
 # this and the next one are the preferred
 # way Ruby for-loops are written
+# http://graysoftinc.com/early-steps/the-evils-of-the-for-loop
 fruits.each do |fruit|
   puts "A fruit of type: #{fruit}"
 end
@@ -56,3 +57,10 @@ inclusive = (0..3).to_a
 exclusive = (0...3).to_a
 puts inclusive
 puts exclusive
+
+# HEY _ I JUST FOUND OUT THAT p IS LIKE puts AND print
+# http://www.garethrees.co.uk/2013/05/04/p-vs-puts-vs-print-in-ruby/
+
+i = "WHAT THE ACTUAL FUCK???"
+
+p i
