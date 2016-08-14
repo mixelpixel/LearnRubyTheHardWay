@@ -1,5 +1,13 @@
 # http://learnrubythehardway.org/book/ex30.html
 # Exercise 30: Else and If
+=begin
+NOTE: from the Common Student Questions
+Q: What happens if multiple elsif blocks are true?
+
+A: Ruby starts and the top runs the first block that is true,
+   so it will run only the first one.
+=end
+
 
 people = 30
 cars = 40
