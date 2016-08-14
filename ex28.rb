@@ -16,10 +16,24 @@
 # equal? "identity comparison"
 # eql? "Hash equality"
 # is_a?
+# kind_of?
+# instance_of?
+# see http://stackoverflow.com/questions/3893278/ruby-kind-of-vs-instance-of-vs-is-a
 # IS THERE A !== ? Apparently not - see end of file
 
-# Practice entering the comparisons in brackets in the Interactive RuBy shell
-# with irb:
+=begin
+Practice entering the comparisons in brackets in the
+Interactive RuBy shell (with cmd: irb) and play around
+to see what happens per the Common Student Questions.
+
+Q: Why does "test" && "test" return "test" or 1 && 1 return 1 instead of true?
+
+A: Ruby and many languages like to return one of the operands to their boolean
+expressions rather than just true or false. This means that if you did
+false && 1 you get the first operand (false) but if you do true && 1 your
+get the second (1). Play with this a bit.
+
+=end
 
 puts (true && true) == true
 puts (false && true) == false
@@ -65,5 +79,5 @@ puts String === "test"   #=> true
 puts String == "test"  #=> false
 # puts String !== "test"
 # puts String not === "test"
-# Nope
+# per line 22 - Nope.
 
