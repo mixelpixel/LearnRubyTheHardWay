@@ -8,7 +8,7 @@ change = [1, 'pennies', 2, 'dimes', 3, 'quarters']
 # this first kind of for-loop goes through a list
 # in a more traditional style found in other languages
 for number in the_count
-  puts "This is count#{number}"
+  puts "This is count #{number}"
 end
 
 # same as above, but in a more Ruby style
@@ -30,9 +30,29 @@ elements = []
 (0..5).each do |i|
   puts "adding #{i} to the list."
   # pushes the i variable on the *end* of the list
-  elements.push(i)
+  # elements.push(i) # THIS SYNTAX IS A METHOD
+  elements << i # THIS, AN OPERATOR, otherwise, THESE TWO STATEMENTS ARE IDENTICAL
 end
 
 # now we can print them out too
-elements.each {|i| puts "Element was: #{}" }
+elements.each {|i| puts "Element was: #{i}" }
+puts elements
 
+# # ...
+# elements = []
+
+# # then use the range operator to do 0 to 5 counts
+# (0...5).each do |i|
+  # puts "adding #{i} to the list."
+  # # pushes the i variable on the *end* of the list
+  # elements.push(i)
+# end
+
+# # now we can print them out too
+# elements.each {|i| puts "Element was: #{i}" }
+# puts elements
+
+inclusive = (0..3).to_a
+exclusive = (0...3).to_a
+puts inclusive
+puts exclusive
