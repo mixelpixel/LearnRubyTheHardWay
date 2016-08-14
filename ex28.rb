@@ -18,6 +18,9 @@
 # is_a?
 # IS THERE A !== ? Apparently not - see end of file
 
+# Practice entering the comparisons in brackets in the Interactive RuBy shell
+# with irb:
+
 puts (true && true) == true
 puts (false && true) == false
 puts (1 == 1 && 2 == 1) == false
