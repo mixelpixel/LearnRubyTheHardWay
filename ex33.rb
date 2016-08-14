@@ -33,3 +33,38 @@ numbers.each do |num|
   p num
   # p numbers
 end
+
+# Study drills
+i = 0
+n = 11
+m = 2
+numbers = []
+
+while i < n
+  puts "At the top is #{i}"
+  numbers.push(i) # ADDS TO THE END OF THE ARRAY
+  
+  i += m
+  # puts "Numbers now: ", numbers # puts prints each [array]s element
+  p numbers # p prints the whole [array]
+  puts "At the bottom i is #{i}"
+  puts "\n"
+end
+
+i = 0
+print "Enter a max number for the loop: "
+n = $stdin.gets.chomp.to_i
+print "Enter a number to increment by: "
+m = $stdin.gets.chomp.to_i
+numbers = []
+
+while i < n
+  puts "At the top is #{i}"
+  numbers.push(i) # ADDS TO THE END OF THE ARRAY
+  
+  i += m
+  # puts "Numbers now: ", numbers # puts prints each [array]s element
+  p numbers # p prints the whole [array]
+  puts "At the bottom i is #{i}"
+  puts "\n"
+end
