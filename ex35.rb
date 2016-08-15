@@ -19,6 +19,8 @@
 # # nice way to simplify
 def prompt
   print "> "
+  input = $stdin.gets.chomp
+  return input
 end
 
 
@@ -27,7 +29,9 @@ def gold_room
   
   # print "> "
   # choice = $stdin.gets.chomp
-  prompt; choice = $stdin.gets.chomp # NOTE the use of the semi-colon
+  # Now I've taken the print and $stdin and put them in the prompt function
+  # I assign the return value from prompt to the variable choice
+  choice = prompt#; choice = $stdin.gets.chomp # NOTE the use of the semi-colon
   
   #this line has a bug, so fix it (bug = does not recognize 0-9, only 1 & 0)
   # if choice.include?("0") || choice.include?("1")
@@ -65,7 +69,7 @@ How are you going to move the bear?
   while true
     # print "> "
     # choice = $stdin.gets.chomp
-    prompt; choice = $stdin.gets.chomp
+    choice = prompt#; choice = $stdin.gets.chomp
     
     if choice == "take honey"
       dead("The bear looks at you then slaps your face off.")
@@ -92,7 +96,7 @@ Do you flee for your life or eat your head?
 
   # print "> "
   # choice = $stdin.gets.chomp
-  prompt; choice = $stdin.gets.chomp
+  choice = prompt#; choice = $stdin.gets.chomp
   
   if choice.include? "flee"
     start
@@ -118,7 +122,7 @@ Which one do you take?
 
   # print "> "
   # choice = $stdin.gets.chomp
-  prompt; choice = $stdin.gets.chomp
+  choice = prompt#; choice = $stdin.gets.chomp
   
   if choice == "left"
     bear_room
