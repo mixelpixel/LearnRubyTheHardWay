@@ -1,6 +1,9 @@
 # http://learnrubythehardway.org/book/ex35.html
 # Exercise 35: Branches and Functions
 
+# for a flow chart of this program:
+# http://www.mkltesthead.com/2011/12/exercise-35-branches-and-functions.html
+
 # # Line 7 "bug" debugging.
 # choice = "50"
 # if choice.include?("0") || choice.include?("1")
