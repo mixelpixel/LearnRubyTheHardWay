@@ -37,7 +37,13 @@ def gold_room
   
   if how_much < 50
     puts "Nice, you're not greedy, you win!"
-    exit(0) # research other exit parameters
+    # http://stackoverflow.com/questions/15543287/why-do-we-pass-0-as-a-parameter-to-exit
+    # exit(0) # research other exit parameters
+    # Process.exit(0) # this is another way
+    # abort("\"You're an abortion\"\" -John McEnroe") # abort with a message
+    # abort # no msg # http://stackoverflow.com/questions/23340609/difference-between-exit-and-abort
+    # exit! # http://stackoverflow.com/questions/5295394/what-is-the-difference-between-exit-and-exit-in-ruby
+    exit
   else
     dead("You greedy bastard!")
   end
@@ -115,6 +121,8 @@ Which one do you take?
     bear_room
   elsif choice == "right"
     cthulhu_room
+  elsif choice == "teleport"
+    gold_room
   else
     dead("You stumble around the room until you starve.")
   end
