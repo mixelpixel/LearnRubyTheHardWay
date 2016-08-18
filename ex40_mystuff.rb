@@ -20,7 +20,11 @@ module MyStuff
     def MyStuff.apple()
         puts "I AM APPLES!"
     end
+    
+    # this is just a variable
+    TANGERINE = "Living reflection of a dream."
 end
 
 # does it need to be indented four spaces
 # or should I keep to the two space indentation?
+

@@ -15,3 +15,10 @@ MyStuff.apple() # get apple from the module
 puts MyStuff::TANGERINE # THIS IS A NEW OPERATOR THE DOUBLE COLON ::
 #                       # it just gets a variable from the module
 
+=begin
+NOTE: In the case of the hash, the key is a string
+and the syntax is [key]. In the case of the module,
+the key is an identifier, and the syntax is .key
+=end
+ 
+# Classes Are Like Modules
