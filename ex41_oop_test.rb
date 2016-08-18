@@ -80,8 +80,8 @@ loop do
     phrase = PHRASES[snippet]
     question, answer = convert(snippet, phrase)
     
-    if PHRASE_FIRST
-      question, answer = answer, question
+    if PHRASE_FIRST # invoking "ruby ex41_oop_test.rb english" reverse the order
+      question, answer = answer, question # from "ruby ex41_oop_test.rb"
     end
     
     print question, "\n\n> "
