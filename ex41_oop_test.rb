@@ -1,6 +1,5 @@
 # http://learnrubythehardway.org/book/ex41.html
 # Exercise 41: Learning To Speak Object Oriented
-# http://learncodethehardway.org/words.txt
 
 # A Reading Test
 
@@ -24,7 +23,7 @@ PHRASES = {
     "From *** get the *** attribute and set it to '***'."
 }
 
-PHRASES_FIRST = ARGV[0] == "english"
+PHRASE_FIRST = ARGV[0] == "english"
 
 open(WORD_URL) {|f|
   f.each_line {|word| WORDS.push(word.chomp)}
