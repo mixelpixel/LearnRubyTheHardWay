@@ -1,0 +1,58 @@
+http://learnrubythehardway.org/book/ex39.html
+Exercise 39: Hashes, Oh Lovely Hashes
+
+Lists(Arrays) and Hash Maps(Dictionaries)
+irb session from the lesson
+
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\user_name> irb
+irb(main):001:0> things = ['a', 'b', 'c', 'd']
+=> ["a", "b", "c", "d"]
+irb(main):002:0> puts things[1]
+b
+=> nil
+irb(main):003:0> things[1] = 'z'
+=> "z"
+irb(main):004:0> puts things[1]
+z
+=> nil
+irb(main):005:0> things
+=> ["a", "z", "c", "d"]
+irb(main):006:0> stuff = {'name' => 'Zed', 'age' => 39, 'height' => 6 * 12 +2}
+=> {"name"=>"Zed", "age"=>39, "height"=>74}
+irb(main):007:0> puts stuff['name']
+Zed
+=> nil
+irb(main):008:0> puts stuff['age']
+39
+=> nil
+irb(main):009:0> puts stuff['height']
+74
+=> nil
+irb(main):010:0> stuff['city'] = "San Francisco"
+=> "San Francisco"
+irb(main):011:0> print stuff['city']
+San Francisco=> nil
+irb(main):012:0> stuff[1] = "Wow"
+=> "Wow"
+irb(main):013:0> stuff[2] = "Neato"
+=> "Neato"
+irb(main):014:0> puts stuff[1]
+Wow
+=> nil
+irb(main):015:0> puts stuff[2]
+Neato
+=> nil
+irb(main):016:0> stuff
+=> {"name"=>"Zed", "age"=>39, "height"=>74, "city"=>"San Francisco", 1=>"Wow", 2=>"Neato"}
+irb(main):017:0> stuff.delete('city')
+=> "San Francisco"
+irb(main):018:0> stuff.delete(1)
+=> "Wow"
+irb(main):019:0> stuff.delete(2)
+=> "Neato"
+irb(main):020:0> stuff
+=> {"name"=>"Zed", "age"=>39, "height"=>74}
+irb(main):021:0>
