@@ -1,19 +1,5 @@
 # http://learnrubythehardway.org/book/ex41.html
 # Exercise 41: Learning To Speak Object Oriented
-# http://learncodethehardway.org/words.txt
-
-# A Reading Test
-
-require 'open-uri'
-
-WORD_URL = "http://learncodethehardway.org/words.txt"
-WORDS = []
-
-PHRASES = {
-  "class ### < ###\nend" =>
-    "Make a class named ### that is-a ###.",
-
-}
 
 
 =begin
