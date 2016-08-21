@@ -51,7 +51,7 @@ class Death < Scene
   @@quips = [
       "You died.  You kinda suck at this.",
       "Your mom would be proud... if she were smarter.",
-      "Such a luser.",
+      "Such a luser!",
       "I have a small puppy that's better at this."
   ]
 
@@ -110,7 +110,7 @@ You tell the one Gothon joke you know:
     \"Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur
     fvgf nebhaq gur ubhfr. . .\"
 
-    The Gothon stops, trieds not to laugh, then bursts out laughing
+    The Gothon stops, tries not to laugh, then bursts out laughing
 and can't move.  While he's laughing you run up and shoot him square
 in the head putting him down, then jump through the Weapon Armory door.
 """
@@ -139,6 +139,7 @@ get the bomb.  The code is 3 digits:
     code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)}"
     print "[keypad]> "
     guess = $stdin.gets.chomp
+    guess = code if guess == "cheat" # CHEATING!!!
     guesses = 1 # a "bug" fix: per Z.A.Shaw intentionally setting it to zero 
     
     while guess != code && guesses < 10
@@ -149,16 +150,18 @@ get the bomb.  The code is 3 digits:
     end
     
     if guess == code
-      puts """The container clicks open and the seal breaks, letting gas out.
-You grab the neutron bomb and run as fast as you can to the
-bridge whenre you must place it in the right spot.
+      puts """
+    The container clicks open and the seal breaks, letting gas out.
+You grab the neutron bomb and run as fast as you can to the bridge
+where you must place it in the right spot.
 """
       return 'the_bridge'
     else
-      puts """The lockbuzzes one last time and then you hear a sickening
-melting sound as the mechanism is fused together.
-You decide to sit there, and finally the Gothons blow up your
-ship from their ship and you die.
+      puts """
+    The lock buzzes one last time and then you hear a sickening
+melting sound as the mechanism is fused together.  You decide
+to sit there, and finally the Gothons blow up your ship from
+their ship and you die.
 """
       return 'death'
     end
