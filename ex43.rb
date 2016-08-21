@@ -49,10 +49,10 @@ end
 class Death < Scene
 
   @@quips = [
-      "You died.  You kinda suck at this.",
-      "Your mom would be proud... if she were smarter.",
-      "Such a luser!",
-      "I have a small puppy that's better at this."
+      "You died.  You kinda suck at this.\n",
+      "Your mom would be proud... if she were smarter.\n",
+      "Such a luser!\n",
+      "I have a small puppy that's better at this.\n"
   ]
 
   def enter()
@@ -76,33 +76,38 @@ after getting into an escape pod
 when a Gothon jumps out, red scaly skin, dark grimy teeth, and evil
 clown costume flowing around his hate-filled body.  He's blocking
 the door to the Armory and about to pull a weapon to blast you.
+
 """
 
 print "> "
   
     action = $stdin.gets.chomp
   
-    if action == 'shoot!'
-      puts """Quick on the draw you yank out your blaster and fire it at the Gothon.
+    if action == 'shoot'
+      puts """
+    Quick on the draw you yank out your blaster and fire it at the Gothon.
 His clown costume is flowing and moving around his body, which throws
-off your aim.  Your laserhits his costume but misses him entirely.  This
-completely ruins the brand new costume his mother bought him, which
+off your aim.  Your laser hits his costume but misses him entirely.  This
+completely ruins the brand new costume his mother just bought him, which
 makes him fly into an insane rage and blast you repeatedly in the face until
 you are dead.  Then he eats you.
+
 """
-      return death
+      return 'death'
     
-    elsif action == "dodge!"
-      puts """Like a world class boxer you dodge, weave, slip and slide right
+    elsif action == "dodge"
+      puts """
+    Like a world class boxer you dodge, weave, slip and slide right
 as the Gothon's blaster cranks a laser past your head.
 In the middle of your artful dodge your foot slips and you
 bang your head on the metal wall and pass out.
 You wake up shortly after only to die as the Gothon stomps on
 your head and eats you.
+
 """
       return 'death'
     
-    elsif action == "tell a joke"
+    elsif action == "joke"
       puts """
     Lucky for you they made you learn Gothon insults in the academy!
 You tell the one Gothon joke you know:
