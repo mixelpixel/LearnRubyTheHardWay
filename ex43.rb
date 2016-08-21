@@ -77,6 +77,8 @@ when a Gothon jumps out, red scaly skin, dark grimy teeth, and evil
 clown costume flowing around his hate-filled body.  He's blocking
 the door to the Armory and about to pull a weapon to blast you.
 
+    Do you 'shoot', 'dodge', or try & 'talk' your way out of this?
+
 """
 
 print "> "
@@ -106,22 +108,23 @@ die as the Gothon stomps on your head and eats you.
 """
       return 'death'
     
-    elsif action == "joke"
+    elsif action == "talk"
       puts """
     Lucky for you they made you learn Gothon insults in the academy!
 You tell the one Gothon joke you know:
 
-    \"Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur
-    fvgf nebhaq gur ubhfr. . .\"
+        \"Lbhe zbgure vf fb sng, jura fur fvgf nebhaq
+        gur ubhfr, fur fvgf nebhaq gur ubhfr . . .\"
 
     The Gothon stops, tries not to laugh, then bursts out laughing
-and can't move.  While he's laughing you run up and shoot him square
-in the head putting him down, then jump through the Weapon Armory door.
+and can't move.  While he's laughing you run up and shoot him
+square in the head putting him down, then jump through the Weapon
+Armory door.
 """
       return 'laser_weapon_armory'
     
     else
-      puts "DOES NOT COMPUTE!"
+      puts "\n    \"%s\" DOES NOT COMPUTE!" % action
       return 'central_corridor'
     end 
   end
@@ -138,7 +141,7 @@ quiet.  You stand up and run for the far side of the room and find
 the neutron bomb in its container.  There's a keypad lock on the box
 and you need the code to get the bomb out.  If you get the code wrong
 10 times then the lock closes forever and you can't get the bomb.
-The code is 3 digits:
+Unless you know a way to 'cheat' - the code is 3 digits:
 
 """
     code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)}"
@@ -159,7 +162,6 @@ The code is 3 digits:
     The container clicks open and the seal breaks, letting gas out.
 You grab the neutron bomb and run as fast as you can to the bridge
 where you must place it in the right spot.
-
 """
       return 'the_bridge'
     else
@@ -186,24 +188,28 @@ the ship.  Each of them has an even uglier clown costume than the
 last.  They haven't pulled their weapons out yet, as they see the
 active bomb under your arm and don't want to set it off.
 
+    Do you 'throw' the bomb at them, or, do you 'place' the bomb
+carefully on the ground?
+
 """
     print "> "
     
     action = $stdin.gets.chomp
     
-    if action == "throw the bomb"
+    if action == "throw"
       puts """
     In a panic you throw the bomb at the group of Gothons
-and make a leap for the door.  Right as you drop it a
-Gothon shoots you right in the back killing you.
-As you die you see another Gothon frantically try to disarm
-the bomb. You die knowing they will probably blow up when
-it goes off
+and make a leap for the door.  Right as you turn around a
+Gothon shoots you square in the back killing you, but not
+instantly.  As you die in agonizing pain from a mortal
+Gothon blaster wound, you see another Gothon frantically
+try to disarm the bomb. You die knowing they will probably
+blow up when it goes off
 
 """
       return 'death'
       
-    elsif action == "slowly place the bomb"
+    elsif action == "place"
       puts """
     You point your blaster at the bomb under your arm
 and the Gothons put their hands up and start to sweat.
