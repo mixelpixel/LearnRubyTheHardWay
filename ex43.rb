@@ -49,10 +49,10 @@ end
 class Death < Scene
 
   @@quips = [
-      "You died.  You kinda suck at this.\n",
-      "Your mom would be proud... if she were smarter.\n",
-      "Such a luser!\n",
-      "I have a small puppy that's better at this.\n"
+      "    You died.  You kinda suck at this.\n\n",
+      "    Your mom would be proud... if she were smarter.\n\n",
+      "    Such a luser!\n\n",
+      "    I have a small puppy that's better at this than you.\n\n"
   ]
 
   def enter()
@@ -98,11 +98,10 @@ you are dead.  Then he eats you.
     elsif action == "dodge"
       puts """
     Like a world class boxer you dodge, weave, slip and slide right
-as the Gothon's blaster cranks a laser past your head.
-In the middle of your artful dodge your foot slips and you
-bang your head on the metal wall and pass out.
-You wake up shortly after only to die as the Gothon stomps on
-your head and eats you.
+as the Gothon's blaster cranks a laser past your head.  In the
+middle of your artful dodge your foot slips and you bang your head
+on the metal wall and pass out.  You wake up shortly after only to
+die as the Gothon stomps on your head and eats you.
 
 """
       return 'death'
@@ -133,19 +132,20 @@ class LaserWeaponArmory < Scene
 
   def enter()
     puts """
-    You do a dive roll into the Weapon Armory, crouch and scan the room
-for more Gothons that might be hiding.  It's dead quiet, too quiet.
-You stand up and run for the far side of the room and find the
-neutron bomb in its container.  There's a keypad lock on the box
-and you need the code to get the bomb out.  If you get the code
-wrong 10 times then the lock closes forever and you can't
-get the bomb.  The code is 3 digits:
+    You do a dive roll into the Weapon Armory, crouch and scan the
+room for more Gothons that might be hiding.  It's dead quiet, too
+quiet.  You stand up and run for the far side of the room and find
+the neutron bomb in its container.  There's a keypad lock on the box
+and you need the code to get the bomb out.  If you get the code wrong
+10 times then the lock closes forever and you can't get the bomb.
+The code is 3 digits:
+
 """
     code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)}"
     print "[keypad]> "
     guess = $stdin.gets.chomp
-    guess = code if guess == "cheat" # CHEATING!!!
-    guesses = 1 # a "bug" fix: per Z.A.Shaw intentionally setting it to zero 
+    guess = code if guess == "cheat" # CHEATING!!! NICE BIT OF LOGIC THO!
+    guesses = 1
     
     while guess != code && guesses < 10
       puts "BZZZZEDDD!"
@@ -159,6 +159,7 @@ get the bomb.  The code is 3 digits:
     The container clicks open and the seal breaks, letting gas out.
 You grab the neutron bomb and run as fast as you can to the bridge
 where you must place it in the right spot.
+
 """
       return 'the_bridge'
     else
@@ -167,6 +168,7 @@ where you must place it in the right spot.
 melting sound as the mechanism is fused together.  You decide
 to sit there, and finally the Gothons blow up your ship from
 their ship and you die.
+
 """
       return 'death'
     end
@@ -177,29 +179,33 @@ end
 class TheBridge < Scene
 
   def enter()
-    puts """You burst onto the Brdge with the neutron destruct bomb
-under your arm and surprise 5 Gothons who are trying to
-take control of the ship.  Each of them has an even uglier
-clown costume than the last.  They haven't pulled their
-weapons out yet, as they see the active bomb under your
-arm and don't want to set it off.
+    puts """
+    You burst onto the Brdge with the neutron destruct bomb under
+your arm and surprise 5 Gothons who are trying to take control of
+the ship.  Each of them has an even uglier clown costume than the
+last.  They haven't pulled their weapons out yet, as they see the
+active bomb under your arm and don't want to set it off.
+
 """
     print "> "
     
     action = $stdin.gets.chomp
     
     if action == "throw the bomb"
-      puts """In a panic you throw the bomb at the group of Gothons
+      puts """
+    In a panic you throw the bomb at the group of Gothons
 and make a leap for the door.  Right as you drop it a
 Gothon shoots you right in the back killing you.
 As you die you see another Gothon frantically try to disarm
 the bomb. You die knowing they will probably blow up when
 it goes off
+
 """
       return 'death'
       
     elsif action == "slowly place the bomb"
-      puts """You point your blaster at the bomb under your arm
+      puts """
+    You point your blaster at the bomb under your arm
 and the Gothons put their hands up and start to sweat.
 You inch backward to the door, open it, and then carefully
 place the bomb on the floor, pointing your blaster at it.
@@ -207,6 +213,7 @@ You then jump back through the door, punch the close button
 and blast the lock so the Gothons can't get out.
 Now that the bomb is placed you can run to the escape pod to
 get off this tin can.
+
 """
       return 'escape_pod'
     else
@@ -220,13 +227,15 @@ end
 class EscapePod
 
   def enter()
-    puts """You rush through the ship desperately trying to make it to 
+    puts """
+    You rush through the ship desperately trying to make it to 
 the escape pod before the whole ship explodes.  It seems like
 hardly any Gothons are on the ship, so your run is clear of
 interference.  You get to the chamber with the escape pods, and
 now need to pick one to take. Some of them could be damaged
 but you don't have time to look. There's 5 pods, which one
 do you take?
+
 """
     good_pod = rand(1..5)
     print "[pod #]> "
