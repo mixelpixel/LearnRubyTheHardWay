@@ -125,6 +125,7 @@ Armory door.
     
     else
       puts "\n    \"%s\" DOES NOT COMPUTE!" % action
+      sleep(2)
       return 'central_corridor'
     end 
   end
@@ -223,7 +224,8 @@ get off this tin can.
 """
       return 'escape_pod'
     else
-      puts "DOES NOT COMPUTE!"
+      puts "\n    \"%s\" DOES NOT COMPUTE!" % action
+      sleep(2)
       return "the_bridge"
     end
   end
