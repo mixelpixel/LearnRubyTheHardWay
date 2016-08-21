@@ -49,14 +49,14 @@ end
 class Death < Scene
 
   @@quips = [
-      "You dies.  You kinda suck at this.",
+      "You died.  You kinda suck at this.",
       "Your mom would be proud... if she were smarter.",
       "Such a luser.",
       "I have a small puppy that's better at this."
   ]
 
   def enter()
-    puts @@quips[rand(0..(@@quips.length -1))]
+    puts @@quips[rand(0..(@@quips.length - 1))]
     exit(1)
   end
 end
@@ -65,16 +65,17 @@ end
 class CentralCorridor < Scene
 
   def enter()
-    puts """The Gothons of Planer Percal #25 have invaded your ship and destroyed
-your entire crew.  You are the last surviving member and your last
-mission is to get the neutron destruct bomb from the Weapons Armory,
-put it in the bridge, and blow the ship up after getting into an
-escape pod
+    puts """
+    The Gothons of Planet Percal #25 have invaded your ship and
+destroyed your entire crew.  You are the last surviving member
+and your last mission is to get the neutron destruct bomb from
+the Weapons Armory, put it in the bridge, and blow the ship up
+after getting into an escape pod
 
-You're running down the central corridor to the Weapons Armory when
-a Gothon jumps out, red scaly skin, dark grimy teeth, and evil clown
-costume flowing around his hate-filled body.  He's blocking the door
-to the Armory and about to pull a weapon to blast you.
+    You're running down the central corridor to the Weapons Armory
+when a Gothon jumps out, red scaly skin, dark grimy teeth, and evil
+clown costume flowing around his hate-filled body.  He's blocking
+the door to the Armory and about to pull a weapon to blast you.
 """
 
 print "> "
@@ -102,12 +103,16 @@ your head and eats you.
       return 'death'
     
     elsif action == "tell a joke"
-      puts """Lucky for you they made you learn Gothon insults in the academy.
+      puts """
+    Lucky for you they made you learn Gothon insults in the academy!
 You tell the one Gothon joke you know:
-Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubhfr.
-The Gothon stops, trieds not to laugh, then bursts out laughing and can't move.
-While he's laughing you run up and shoot him square in the head
-putting him down, then jump through the Weapon Armory door.
+
+    \"Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur
+    fvgf nebhaq gur ubhfr. . .\"
+
+    The Gothon stops, trieds not to laugh, then bursts out laughing
+and can't move.  While he's laughing you run up and shoot him square
+in the head putting him down, then jump through the Weapon Armory door.
 """
       return 'laser_weapon_armory'
     
@@ -122,18 +127,19 @@ end
 class LaserWeaponArmory < Scene
 
   def enter()
-    puts """You do a dive roll into the Weapon Armory, crouch and scan the room
+    puts """
+    You do a dive roll into the Weapon Armory, crouch and scan the room
 for more Gothons that might be hiding.  It's dead quiet, too quiet.
 You stand up and run for the far side of the room and find the
 neutron bomb in its container.  There's a keypad lock on the box
 and you need the code to get the bomb out.  If you get the code
 wrong 10 times then the lock closes forever and you can't
-get the bomb.  The code is 3 digits.
+get the bomb.  The code is 3 digits:
 """
     code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)}"
     print "[keypad]> "
     guess = $stdin.gets.chomp
-    guesses = 0
+    guesses = 1 # a "bug" fix: per Z.A.Shaw intentionally setting it to zero 
     
     while guess != code && guesses < 10
       puts "BZZZZEDDD!"
