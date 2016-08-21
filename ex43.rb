@@ -249,10 +249,10 @@ end
 class Map
   @@scenes = {
     'central_corridor' => CentralCorridor.new(),
-    'laser_weapon_armory' => LaserWeaponArmory.new()
+    'laser_weapon_armory' => LaserWeaponArmory.new(),
     'the_bridge' => TheBridge.new(),
     'escape_pod' => EscapePod.new(),
-    'death' => Death.new()
+    'death' => Death.new(),
     'finished' => Finished.new()
   }
 
