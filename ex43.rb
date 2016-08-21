@@ -163,24 +163,110 @@ end
 class TheBridge < Scene
 
   def enter()
+    puts """You burst onto the Brdge with the neutron destruct bomb
+under your arm and surprise 5 Gothons who are trying to
+take control of the ship.  Each of them has an even uglier
+clown costume than the last.  They haven't pulled their
+weapons out yet, as they see the active bomb under your
+arm and don't want to set it off.
+"""
+    print "> "
+    
+    action = $stdin.gets.chomp
+    
+    if action == "throw the bomb"
+      puts """In a panic you throw the bomb at the group of Gothons
+and make a leap for the door.  Right as you drop it a
+Gothon shoots you right in the back killing you.
+As you die you see another Gothon frantically try to disarm
+the bomb. You die knowing they will probably blow up when
+it goes off
+"""
+      return 'death'
+      
+    elsif action == "slowly place the bomb"
+      puts """You point your blaster at the bomb under your arm
+and the Gothons put their hands up and start to sweat.
+You inch backward to the door, open it, and then carefully
+place the bomb on the floor, pointing your blaster at it.
+You then jump back through the door, punch the close button
+and blast the lock so the Gothons can't get out.
+Now that the bomb is placed you can run to the escape pod to
+get off this tin can.
+"""
+      return 'escape_pod'
+    else
+      puts "DOES NOT COMPUTE!"
+      return "the_bridge"
+    end
   end
 end
+
 
 class EscapePod
 
   def enter()
+    puts """You rush through the ship desperately trying to make it to 
+the escape pod before the whole ship explodes.  It seems like
+hardly any Gothons are on the ship, so your run is clear of
+interference.  You get to the chamber with the escape pods, and
+now need to pick one to take. Some of them could be damaged
+but you don't have time to look. There's 5 pods, which one
+do you take?
+"""
+    good_pod = rand(1..5)
+    print "[pod #]> "
+    guess == $stdin.gets.chomp.to_i
+    
+    if guess != good_pod
+      puts "You jump into pod %s and hit the eject button." % guess
+      puts "The pod escapes out into the void of space, then"
+      puts "implodes as the hull ruptures, crushing your body"
+      puts "into jam jelly."
+      return 'death'
+    else
+      puts "You jump into pod %s and hit the eject button." % guess
+      puts "The pod easily slides out into space heading to"
+      puts "the planet below.  As it flies to the planet, you look"
+      puts "back and see your ship implode then explode like a"
+      puts "bright star, taking out the Gothon ship at the same"
+      puts "time.  You won!"
+      
+      
+      return 'finished'
+    end
   end
 end
 
-class Map
 
-  def initialize( start_scene)
+class Finished < Scene
+  def enter()
+    puts "Good job!"
+  end
+end
+
+
+class Map
+  @@scenes = {
+    'central_corridor' => CentralCorridor.new(),
+    'laser_weapon_armory' => LaserWeaponArmory.new()
+    'the_bridge' => TheBridge.new(),
+    'escape_pod' => EscapePod.new(),
+    'death' => Death.new()
+    'finished' => Finished.new()
+  }
+
+  def initialize(start_scene)
+    @start_scene = start_scene
   end
   
-  def next_scene( scene_name)
+  def next_scene(scene_name)
+    val = @@scenes[scene_name]
+    return val
   end
   
   def opening_scene()
+    return next_scene(@start_scene)
   end
 end
 
