@@ -122,8 +122,43 @@ end
 class LaserWeaponArmory < Scene
 
   def enter()
+    puts """You do a dive roll into the Weapon Armory, crouch and scan the room
+for more Gothons that might be hiding.  It's dead quiet, too quiet.
+You stand up and run for the far side of the room and find the
+neutron bomb in its container.  There's a keypad lock on the box
+and you need the code to get the bomb out.  If you get the code
+wrong 10 times then the lock closes forever and you can't
+get the bomb.  The code is 3 digits.
+"""
+    code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)}"
+    print "[keypad]> "
+    guess = $stdin.gets.chomp
+    guesses = 0
+    
+    while guess != code && guesses < 10
+      puts "BZZZZEDDD!"
+      guesses +=1
+      print "[keypad]> "
+      guess = $stdin.gets.chomp
+    end
+    
+    if guess == code
+      puts """The container clicks open and the seal breaks, letting gas out.
+You grab the neutron bomb and run as fast as you can to the
+bridge whenre you must place it in the right spot.
+"""
+      return 'the_bridge'
+    else
+      puts """The lockbuzzes one last time and then you hear a sickening
+melting sound as the mechanism is fused together.
+You decide to sit there, and finally the Gothons blow up your
+ship from their ship and you die.
+"""
+      return 'death'
+    end
   end
 end
+
 
 class TheBridge < Scene
 
