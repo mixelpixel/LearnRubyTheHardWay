@@ -212,14 +212,13 @@ blow up when it goes off
       
     elsif action == "place"
       puts """
-    You point your blaster at the bomb under your arm
-and the Gothons put their hands up and start to sweat.
-You inch backward to the door, open it, and then carefully
-place the bomb on the floor, pointing your blaster at it.
-You then jump back through the door, punch the close button
-and blast the lock so the Gothons can't get out.
-Now that the bomb is placed you can run to the escape pod to
-get off this tin can.
+    You point your blaster at the bomb under your arm and the
+Gothons put their hands up and start to sweat.  You inch
+backward to the door, open it, and then carefully place the
+bomb on the floor, pointing your blaster at it.  You then jump
+back through the door, punch the close button and blast the
+lock so the Gothons can't get out.  Now that the bomb is
+placed you can run to the escape pod to get off this tin can.
 
 """
       return 'escape_pod'
@@ -247,23 +246,19 @@ do you take?
 """
     good_pod = rand(1..5)
     print "[pod #]> "
-    guess == $stdin.gets.chomp.to_i
+    guess = $stdin.gets.chomp.to_i
     
     if guess != good_pod
-      puts "You jump into pod %s and hit the eject button." % guess
-      puts "The pod escapes out into the void of space, then"
-      puts "implodes as the hull ruptures, crushing your body"
-      puts "into jam jelly."
+      puts "\n    You jump into pod %s and hit the eject button.  The pod escapes" % guess
+      puts "out into the void of space, then implodes as the hull ruptures,"
+      puts "crushing your body into jam jelly.\n\n"
       return 'death'
+      
     else
-      puts "You jump into pod %s and hit the eject button." % guess
-      puts "The pod easily slides out into space heading to"
-      puts "the planet below.  As it flies to the planet, you look"
-      puts "back and see your ship implode then explode like a"
-      puts "bright star, taking out the Gothon ship at the same"
-      puts "time.  You won!"
-      
-      
+      puts "\n    You jump into pod #%s and hit the eject button.  The pod easily" % guess
+      puts "slides out into space heading to the planet below.  As it flies to the"
+      puts "planet, you look back and see your ship implode then explode like a"
+      puts "bright star, taking out the Gothon ship at the same time.  You won!\n\n"
       return 'finished'
     end
   end
@@ -272,7 +267,7 @@ end
 
 class Finished < Scene
   def enter()
-    puts "Good job!"
+    puts "Good job!\n\n"
   end
 end
 
