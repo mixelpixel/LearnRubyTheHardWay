@@ -65,7 +65,7 @@ end
 class CentralCorridor < Scene
 
   def enter()
-    puts """
+    paragraphs = """
     The Gothons of Planet Percal #25 have invaded your ship and
 destroyed your entire crew.  You are the last surviving member
 and your last mission is to get the neutron destruct bomb from
@@ -81,7 +81,13 @@ the door to the Armory and about to pull a weapon to blast you.
 
 """
 
-print "> "
+    text = paragraphs.split("")
+    for char in text
+      print char
+      sleep(0.001)
+    end
+    
+    print "> "
   
     action = $stdin.gets.chomp
   
