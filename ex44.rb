@@ -1,6 +1,7 @@
 # http://learnrubythehardway.org/book/ex44.html
 # Exercise 44: Inheritance Versus Composition
 
+
 # Implicit Inheritance
 
 class Parent
@@ -42,5 +43,29 @@ son = Child.new()
 
 dad.override()
 son.override()
+
+
+# Alter Before or After
+
+class Parent
+  def altered()
+    puts "PARENT altered()"
+  end
+end
+
+class Child < Parent
+  def altered()
+    puts "CHILD, BEFORE PARENT altered()"
+    super()
+    puts "CHILD, AFER PARENT altered()"
+  end
+end
+
+dad = Parent.new()
+son = Child.new()
+
+dad.altered()
+son.altered()
+
 
 
