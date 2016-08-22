@@ -1,6 +1,7 @@
 # http://learnrubythehardway.org/book/ex44.html
 # Exercise 44: Inheritance Versus Composition
 # https://github.com/bbatsov/ruby-style-guide
+# NOTE this script works in conjunction with ex44_other.rb
 
 # Implicit Inheritance
 
