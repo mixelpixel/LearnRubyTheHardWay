@@ -199,7 +199,7 @@ active bomb under your arm and don't want to set it off.
 carefully on the ground?
 
 """
-    print "> "
+    print "> \a\a\a\a\a\a\a\a\a"
     
     action = $stdin.gets.chomp
     
@@ -252,6 +252,7 @@ do you take?
 """
     good_pod = rand(1..5)
     print "[pod #]> "
+    print "\a\a\a\a\a\a\a\a\a"
     guess = $stdin.gets.chomp.to_i
     
     if guess != good_pod
