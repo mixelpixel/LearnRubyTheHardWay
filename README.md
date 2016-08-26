@@ -1,5 +1,4 @@
-# Learn Ruby The Hard Way
-# by Zed A. Shaw
+# Learn Ruby The Hard Way  
 
 Learning Ruby and starting out with Zed A. Shaw's instructions  
 http://learnrubythehardway.org/  
